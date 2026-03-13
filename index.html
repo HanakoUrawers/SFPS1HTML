@@ -5,14 +5,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>AC2</title>
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{background:#0d0d0d;display:flex;flex-direction:column;
-         align-items:center;justify-content:center;height:100vh;
-         font-family:'Segoe UI',sans-serif;color:#eee}
-    h1{font-size:1.3rem;margin-bottom:14px;letter-spacing:3px;
-        text-transform:uppercase;opacity:.6}
-    #game{width:min(854px,100vw);height:min(480px,56.25vw);
-           background:#000;border:2px solid #222;border-radius:4px}
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    
+    body { 
+      background: #000; /* Deep black to blend with the emulator */
+      width: 100vw; 
+      height: 100vh; 
+      overflow: hidden; /* Prevents scrollbars */
+      font-family: 'Segoe UI', sans-serif; 
+    }
+
+    /* Hidden to allow the emulator to take up 100% of the display */
+    h1 { 
+      display: none; 
+    }
+
+    /* Scales perfectly to fill the window. EmulatorJS handles the 4:3 aspect ratio natively */
+    #game { 
+      width: 100vw; 
+      height: 100vh; 
+    }
   </style>
 </head>
 <body>
@@ -21,8 +37,8 @@
   <script>
     EJS_player        = '#game';
     EJS_core          = 'psx';
-    EJS_gameUrl       = 'rom/Ace Combat 2 (USA).bin';
-    EJS_biosUrl       = 'bios/SCPH1001.BIN';
+    EJS_gameUrl       = 'https://media.githubusercontent.com/media/HanakoUrawers/SFPS1HTML/refs/heads/main/rom/Ace%20Combat%202%20(USA).bin';
+    EJS_biosUrl       = 'https://raw.githubusercontent.com/HanakoUrawers/SFPS1HTML/main/bios/SCPH1001.BIN';
     EJS_pathtodata    = 'https://cdn.emulatorjs.org/stable/data/';
     EJS_startOnLoaded = true;
     EJS_color         = '#00d4ff';
