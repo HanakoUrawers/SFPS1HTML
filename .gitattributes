@@ -1,0 +1,2 @@
+rom/* filter=lfs diff=lfs merge=lfs -text
+bios/* filter=lfs diff=lfs merge=lfs -text
